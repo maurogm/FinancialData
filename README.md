@@ -1,16 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MyFinancialData
+# FinancialData
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of MyFinancialData is to …
+The goal of FinancialData is to …
 
 ## Installation
 
-You can install the development version of MyFinancialData like so:
+You can install the development version of FinancialData like so:
 
 ``` r
 # FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
@@ -21,7 +21,7 @@ You can install the development version of MyFinancialData like so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(MyFinancialData)
+library(FinancialData)
 ## basic example code
 ```
 

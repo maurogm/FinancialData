@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(MyFinancialData)
+library(FinancialData)
 
-test_check("MyFinancialData")
+test_check("FinancialData")

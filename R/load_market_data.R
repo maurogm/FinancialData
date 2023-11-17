@@ -3,6 +3,7 @@
 #' @param ticker A string with the ticker of the asset to be loaded.
 #' @param exchange A string identifying the stock exchange where the asset is traded.
 #' @return A data frame with historic market data.
+#' @importFrom readr read_csv
 #' @export
 #' @example
 #' load_market_data("YPFD", "BCBA")
@@ -28,6 +29,8 @@ load_market_data <- function(
       "volumenNominal",
       "cantidadOperaciones"
     )
-    data.table::fread(path_file, col.names = colnames)
+    data <- readr::read_csv(path_file, col_names = colnames, show_col_types = FALSE)
+    # readr::read_csv because has better out-of-the-box parsing of datetime than fread
+    setDT(data)
   }
 }

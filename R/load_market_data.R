@@ -32,5 +32,7 @@ load_market_data <- function(
     data <- readr::read_csv(path_file, col_names = colnames, show_col_types = FALSE)
     # readr::read_csv because has better out-of-the-box parsing of datetime than fread
     setDT(data)
+    data[, exchange := exchange]
+    data[, ticker := ticker]
   }
 }

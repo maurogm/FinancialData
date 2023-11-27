@@ -5,7 +5,7 @@
 #' @param df_exch_rate A data.table with the exchange rate data, as returned by `load_ccl()
 #' @import magrittr
 #' @import data.table
-#' @importFrom dplyr select all_of
+#' @importFrom dplyr mutate select all_of
 #' @return The same data.table with it's prices converted to the new currency.
 #' @export
 #' @example
@@ -16,7 +16,7 @@ market_data_to_ccl <- function(df_market, df_exch_rate) {
     datetime <- . <- NULL # due to NSE notes in R CMD check
     original_columns <- copy(colnames(df_market))
     df_market %>%
-        .[, date := as.Date(datetime)] %>%
+        dplyr::mutate(date = as.Date(datetime)) %>%
         merge(df_exch_rate, by.x = c("date", "currency"), by.y = c("date", "currency_from"), all.x = TRUE) %>%
         homogenize_prices() %>%
         setnames(c("currency", "currency_to"), c("currency_from", "currency")) %>%

@@ -13,7 +13,7 @@
 #' path_factory("market")
 path_factory <- function(
     dir_id = c("resources", "outputs", "currencies", "market")) {
-  path_resources <- "~/Proyectos/Personales/broker-management/src/main/resources/"
+  path_resources <- "~/Documents/Proyectos/Personales/broker-management/src/main/resources/"
   path_outputs <- paste0(path_resources, "outputs/")
   path_currencies <- paste0(path_outputs, "currencies/")
   path_market <- paste0(path_resources, "market/")

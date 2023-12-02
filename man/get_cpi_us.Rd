@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_cpi_us.R
 \name{get_cpi_us}
 \alias{get_cpi_us}
-\title{Get monthly CPI data from FRED}
+\title{Get monthly Consumer Price Index data from FRED}
 \usage{
 get_cpi_us()
 }

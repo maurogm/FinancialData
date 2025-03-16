@@ -19,4 +19,6 @@ Imports:
     lubridate,
     zoo,
     quantmod,
-    magrittr
+    magrittr,
+    readxl,
+    curl

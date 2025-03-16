@@ -55,7 +55,6 @@ get_tcrm <- function(local_dir = "/tmp") {
 #' @param dt A data.table containing TCRM data. It must have a "date" column and a column matching tcrm_column.
 #' @param tcrm_column A character string specifying the name of the column in dt to be multiplied by tx_gap.
 #' @return The original data.table dt with an additional column named <tcrm_column>_ccl.
-#' @export
 #' @examples
 #' \dontrun{
 #'   # Suppose dt has a "date" column and a "value" column:
